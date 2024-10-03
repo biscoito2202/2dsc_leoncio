@@ -9,3 +9,20 @@ body {
     justify-content: center;
     background-color: #f1aff3;
 }
+.app {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+input {
+    padding: 8px;
+    margin: 8px 0;
+    outline: none;
+}
+
+#btn-calcular {
+    background-color: rgb(241, 96, 241);
+    color:#ffffff;
+    padding: 12px;
+    border-radius: 4px;;
+}
