@@ -4,9 +4,9 @@ const numero2 = document.querySelector('#numero2')
 const btnCalcular = document.querySelector('#btn-calcular')
 const resultado = document.querySelector('.resultado')
 const divisao = document.querySelector('.divisao')
-const adicao = document.querySelector('adicao')
-const subtracao = document.querySelector('subtracao')
-const multiplicacao = document.querySelector('multiplicaco')
+const adicao = document.querySelector('.adicao')
+const subtracao = document.querySelector('.subtracao')
+const multiplicacao = document.querySelector('.multiplicacao')
 
 // alert(numero1)
 // CRIAR A FUNÇÃO 
@@ -14,17 +14,26 @@ function calcular(){
     const n1 = Number(numero1.value)
     const n2 = Number(numero2.value)
     if(typeof n1 === 'number' && typeof n2 === 'number') {
-        const adicao = `A soma de ${n1} e ${n2} = ${n1+n2}`
-        alert(adicao)
+        const add = `A soma de ${n1} e ${n2} = ${n1+n2}`
+        const add = `A divisão de ${n1} e ${n2} = ${n1:n2}`
+        const add = `A multiplicação de ${n1} e ${n2} = ${n1*n2}`
+        const add = `A subtração de ${n1} e ${n2} = ${n1-n2}`
+        //alert(adicao)
+        adicao.innerHTML = add
+        divisao.innerHTML = add
+        multiplicacao.innerHTML = add
+        subtracao.innerHTML = add
+        
     } else {
         alert('Por favor, digite um número correto.')
     }
     //alert('Resultado :' + resultado)
 }
     
-}
+
 
 // ADICIONAR ESCUTAR DE EVENTOS
-btnCalcular.addEventListener('click', function(){
+btnCalcular.addEventListener('click', function(evento){
+    evento.preventDefault()//TIRAR O COMPORTAMENTO PADRÃO
     calcular()
 })
